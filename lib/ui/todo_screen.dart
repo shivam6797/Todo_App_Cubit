@@ -113,8 +113,7 @@ class _TodoScreenState extends State<TodoScreen>
                   selectedCategory,
                   selectedPriority,
                 );
-
-// Agar filteredData empty ho, to UI show kare instead of RangeError
+                // Agar filteredData empty ho, to UI show kare instead of RangeError
                 if (filteredData.isEmpty) {
                   return Center(
                     child: Text(
@@ -123,9 +122,8 @@ class _TodoScreenState extends State<TodoScreen>
                     ),
                   );
                 }
-
                 return ListView.builder(
-                  itemCount:filteredData.length,
+                  itemCount: filteredData.length,
                   padding: EdgeInsets.only(top: 10),
                   itemBuilder: (context, index) {
                     TodoModel todo = state.mData[index];
