@@ -125,7 +125,7 @@ class _TodoScreenState extends State<TodoScreen>
                 }
 
                 return ListView.builder(
-                  itemCount: state.mData.length,
+                  itemCount:filteredData.length,
                   padding: EdgeInsets.only(top: 10),
                   itemBuilder: (context, index) {
                     TodoModel todo = state.mData[index];
@@ -276,16 +276,22 @@ class _TodoScreenState extends State<TodoScreen>
         trailing: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-           // ignore: unrelated_type_equality_checks
-           todo.isCompleted == false ?  IconButton(
-              padding: EdgeInsets.all(4), 
-              constraints: BoxConstraints(), 
-              icon: Icon(FontAwesomeIcons.edit, color: Colors.blue.shade400 ,size:18,),
-              onPressed: () {
-                Navigator.pushNamed(context, AppRoutes.ROUTE_ADD_Task,
-                    arguments: todo);
-              },
-            ): Container(),
+            // ignore: unrelated_type_equality_checks
+            todo.isCompleted == false
+                ? IconButton(
+                    padding: EdgeInsets.all(4),
+                    constraints: BoxConstraints(),
+                    icon: Icon(
+                      FontAwesomeIcons.edit,
+                      color: Colors.blue.shade400,
+                      size: 18,
+                    ),
+                    onPressed: () {
+                      Navigator.pushNamed(context, AppRoutes.ROUTE_ADD_Task,
+                          arguments: todo);
+                    },
+                  )
+                : Container(),
             IconButton(
               padding: EdgeInsets.all(4),
               constraints: BoxConstraints(),
