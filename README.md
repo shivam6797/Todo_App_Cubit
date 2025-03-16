@@ -29,7 +29,7 @@ UI: Flutter
      <td align="center"><img src="https://github.com/user-attachments/assets/d088bfa9-4a15-4abd-bfe3-c82a1d41e380" width="200" /></td>
   </tr>
    <tr>
-    <td colspan="10" style="height: 40px;"></td>  <!-- 👈 Yeh gap add karega -->
+    <td colspan="10" style="height: 40px;"></td>
   </tr>
   <tr>
      <td align="center"><img src="https://github.com/user-attachments/assets/9fd2200f-fcfe-4aa8-8f56-624adacd560d" width="200" /></td>
